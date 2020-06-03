@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load render_bundle from webpack_loader %}
+
+{% block content %}
+    <noscript>
+        <strong> Ci Dispiace ma il frontend non funziona senza JavaScript abilitato</strong>
+    </noscript>
+        <div id="app"> </div>
+        <script type="text/javascript" src='http://127.0.0.1:8081/bundle.js'>   </script>
+
+{% endblock %}
