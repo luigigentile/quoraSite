@@ -57,6 +57,9 @@ INSTALLED_APPS = [
 
 ]
 
+
+CRISPY_TEMPLATE_PACK = "bootstrap4" # impostazione necessaria per django-crispy-forms
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware','whitenoise.middleware.WhiteNoiseMiddleware',
