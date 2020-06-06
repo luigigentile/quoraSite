@@ -75,14 +75,14 @@
                         class="question-link">
                         {{ question.content }}
                     </router-link>
-
+<!--
                     <router-link
                             :to="{ name: 'question-answers-list', params: { pk: question.id } }"
                             class="question-answers-list">
                             id = {{ question.id }}
                     </router-link>
                          <p class="mb-n1"> <strong>Answers: {{ question.answers_count }}</strong></p>
-
+ -->
 
                     </div>
                  </div>

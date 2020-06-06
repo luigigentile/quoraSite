@@ -167,7 +167,7 @@ export default {
                 this.newAnswerBody = null;
                 this.showForm = false;
                 this.userHasAnswered = true;
-                alert("Risposta aggiunta con successo")
+                alert("Answer successfully added")
                 this.getQuestionAnswers();
         //        window.location.reload()
 
