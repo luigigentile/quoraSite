@@ -21,7 +21,7 @@
                 <router-link
                   :to="{ name: 'question-editor' }"
                   class="btn btn-sm btn-danger"
-                  >Aggiungi domanda
+                  >Add Question
                 </router-link>
             </li>
 

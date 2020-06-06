@@ -2,14 +2,14 @@
     <div class="single-question mt-2">
         <div class="container">
              <p>Contenuto: {{ question.content }} </p>
-             <p class="mb-0">Domanda aggiunta da:
+             <p class="mb-0">Question added By:
                  <span class="author-name"> {{ question.author }} </span>
              </p>
               <p>{{ question.created_at }}</p>
 
              <p> loading answers: </p>
 
-             <p>Numero risposte</p>
+             <p>Number of Answers</p>
 
 
         </div>
@@ -75,7 +75,7 @@ export default {
             this.getUsersName();
             this.getQuestionAnswersList();
             this.getQuestionData();
-            document.title = "Aggiungi domanda";
+            document.title = "Add Question";
 
         }
     }

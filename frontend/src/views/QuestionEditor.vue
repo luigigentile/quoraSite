@@ -2,26 +2,26 @@
     <div class="container mt-2">
         <div class="row">
             <div class="col-12">
-                <h1 class = "mb-3">Aggiungi una  domanda </h1>
+                <h1 class = "mb-3">{{title}} </h1>
 
                 <form @submit.prevent="onSubmit" >
                     <textarea
                     v-model= "questionBody"
                     class = "form-control"
-                    placeholder = "Cosa vuoi chiedere?"
+                    placeholder = "what do you want to ask?"
                     rows="3" cols="80">
                     </textarea>
                     <br>
                     <button
                     class = 'btn btn-success'
                     type="submit"
-                    > Pubblica domanda
+                    > Publish Question
                     </button>
 
                     <button
                     @click="tornaIndietro"
                     class="btn btn-sm btn-primary ml-3">
-                    Torna Indietro
+                    No, take me back
                     </button>
 
 
@@ -42,7 +42,6 @@
 
 
 
-
 import { apiService } from "../common/api.service";
 export default {
     name: "QuestionEditor",
@@ -59,6 +58,7 @@ export default {
 
     data() {
         return {
+            title: null,
             questionBody: this.previousQuestion  || null,
             error: null,
             usersName:[],
@@ -110,8 +110,14 @@ export default {
             }
         },
         created() {
-            document.title = "Aggiungi domanda";
-        }
+            if (this.slug)  {
+                this.title = "Modify Question"
+                document.title = this.title;
+            } else {
+                this.title = "Add Question"
+                document.title = this.title;
+            }
+        },
     }
 
 </script>

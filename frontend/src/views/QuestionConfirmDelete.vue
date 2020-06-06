@@ -2,7 +2,7 @@
     <div class="container mt-2">
         <div class="row">
             <div class="col-12">
-                <h3 class = "mb-3">Sei sicuro di voler eliminare la seguente domanda </h3>
+                <h3 class = "mb-3">Are you sure you want to delete the following question</h3>
 
                 <form @submit.prevent="onSubmit" >
 
@@ -15,11 +15,11 @@
                     <button
                        class ="btn btn-outline-success"
                         type="submit"
-                        >Si, sono sicuro
+                        >yes,I'm sure
                     </button>
                     <button
                     @click="tornaIndietro"
-                    class="btn btn-outline-info ml-3">"No, torna indietro"
+                    class="btn btn-outline-info ml-3">"No, take me back"
                     </button>
 
                 </form>
@@ -66,8 +66,8 @@ export default {
     methods : {
         tornaIndietro() {
             this.$router.push({
-                name: "question",
-                params: { slug: this.slug }
+                name: "home",
+
             })
 //  window.history.back()
          },
@@ -86,7 +86,7 @@ export default {
 
         },
         created() {
-            document.title = "Aggiungi domanda";
+            document.title = "Delete Question";
         }
     }
 

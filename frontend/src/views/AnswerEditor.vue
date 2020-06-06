@@ -2,7 +2,7 @@
     <div class="container mt-2">
         <div class="row">
             <div class="col-12">
-                <h1 class="mb-3">Modifica la tua risposta</h1>
+                <h1 class="mb-3">Edit your answer</h1>
                 <form @submit.prevent="onSubmit">
                     <textarea
                         v-model="answerBody"
@@ -13,15 +13,15 @@
                     <button
                         class="btn btn-sm btn-success"
                         type="submit"
-                        >Pubblica la Risposta
+                        >Publish Question
                     </button>
                     <button
                     @click="tornaIndietro"
                     class="btn btn-sm btn-primary ml-3">
-                    Torna Indietro
+                    No, take me back
                     </button>
 
-                </form>
+            </form>
                 <p class="error mt-2">{{ error }}</p>
             </div>
         </div>
